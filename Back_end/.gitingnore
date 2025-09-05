@@ -1,0 +1,6 @@
+#denpendencies 
+node_modules/
+
+.env       # ignore .env (real secrets)
+.env.*     # ignore any .env.something (e.g., .env.local, .env.prod)
+!.env.example  # BUT keep .env.example tracked
