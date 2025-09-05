@@ -1,6 +1,32 @@
-#denpendencies 
+# -------------------------
+# Dependencies (installed packages)
+# -------------------------
+# Never commit node_modules; it can be reinstalled from package.json
 node_modules/
 
-.env       # ignore .env (real secrets)
-.env.*     # ignore any .env.something (e.g., .env.local, .env.prod)
-!.env.example  # BUT keep .env.example tracked
+# -------------------------
+# Environment & secrets
+# -------------------------
+# Ignore the main .env file that holds secrets (e.g., MONGO_URI)
+.env
+# Ignore any variant like .env.local, .env.production, etc.
+.env.*
+
+# Track a safe template so teammates know which keys to create.
+# The leading "!" negates the ignore above for this single file.
+!.env.example
+
+# -------------------------
+# OS / editor clutter
+# -------------------------
+# macOS Finder metadata
+.DS_Store
+# (Optional) VS Code settings (uncomment if you don't want to commit them)
+# .vscode/
+
+# -------------------------
+# Logs & build outputs (optional—uncomment if you generate these)
+# -------------------------
+# *.log
+# dist/
+# build/
