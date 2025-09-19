@@ -6,7 +6,7 @@ dotenv.config(); // process the .env
 
 const ratelimit = new Ratelimit ({
     redis: Redis.fromEnv(), // reads the the redis enviorment variables from the .env file , "Redis.fromEnv();" can you only read the .env file with the same key names as shown in the .env file.
-    limiter: Ratelimit.slidingWindow(100, "60 s"), // rate limit for 100 request , in 60 seconds 
+    limiter: Ratelimit.slidingWindow(10, "20 s"), // rate limit for 100 request , in 60 seconds 
 });
 
 // redis and limiter like dictionary wih key and value , with the redis and limiter being fixed names
